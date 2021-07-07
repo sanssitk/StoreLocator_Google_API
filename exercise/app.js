@@ -36,7 +36,9 @@ app.post("/api/stores", (req, res) => {
 });
 
 app.delete("/api/stores", (req, res) => {
-    res.send("You deleted")
+    Store.deleteMany({}, (err) => {
+        res.status(200).send(err)
+    })
 })
 
 app.get("/", (req, res) => {
