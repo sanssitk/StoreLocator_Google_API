@@ -5,6 +5,7 @@ const googleMapsURL = "https://maps.googleapis.com/maps/api/geocode/json";
 class GoogleMaps {
     async getCoordinates(zipCode) {
         let coordinates = [];
+
         await axios.get(googleMapsURL, {
             params: {
                 address: zipCode,

@@ -59,7 +59,7 @@ app.get("/api/stores", (req, res) => {
             Store.find({
                 location: {
                     $near: {
-                        $maxDistance: 5000,
+                        $maxDistance: 3000,
                         $geometry: {
                             type: "Point",
                             coordinates: coordinates,
